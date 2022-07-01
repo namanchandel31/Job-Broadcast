@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:jobbroadcaster/view/homepage_view.dart';
 import 'package:lottie/lottie.dart';
 import 'package:otp_text_field/otp_field_style.dart';
 import 'package:otp_text_field/style.dart';
@@ -79,7 +80,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   code = pin;
                   // print("Completed: " + code);
                 }),
-            30.h.heightBox,
+            20.h.heightBox,
             ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(AppColors.primary),
@@ -94,7 +95,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
               ),
               onPressed: () {
-                // Get.to(() => const NewPasswordScreen());
+                Get.to(() => HomePageScreen());
               },
               child: const Text(
                 'VERIFY',
