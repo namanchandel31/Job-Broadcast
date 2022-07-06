@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:jobbroadcaster/view/dashboard_view.dart';
 import 'package:jobbroadcaster/view/homepage_view.dart';
 import 'package:lottie/lottie.dart';
 import 'package:otp_text_field/otp_field_style.dart';
@@ -95,7 +96,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
               ),
               onPressed: () {
-                Get.to(() => HomePageScreen());
+                Get.to(() => Dashboard());
               },
               child: const Text(
                 'VERIFY',

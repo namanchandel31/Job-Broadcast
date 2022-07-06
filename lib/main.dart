@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Lato',
           primarySwatch: Colors.grey,
         ),
-        home: HomePageScreen(),
+        home: LandingScreen(),
       ),
     );
   }
