@@ -58,7 +58,99 @@ class ProfileScreen extends GetView {
                       'assets/profile.jpg',
                     ),
                     fit: BoxFit.cover)),
-          ).centered()
+          ).centered(),
+          4.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'Full Name',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'Mobile',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'Gender',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'Email',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'Interested Locations',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          4.h.heightBox,
+          ElevatedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(AppColors.primary),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)))),
+            child: Text(
+              'Update',
+            ),
+          ).w(90.w).centered()
         ],
       )),
     );
