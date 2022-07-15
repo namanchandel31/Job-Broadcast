@@ -1,3 +1,4 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -21,16 +22,6 @@ class PostDetailScreen extends GetView {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          actions: [
-            Icon(
-              Icons.notifications,
-              size: 18,
-              color: AppColors.primary,
-            ).paddingOnly(right: 12).onTap(() {
-              Get.to(() => NotificationScreen());
-            })
-          ],
-          // automaticallyImplyLeading: false,
           leading: Icon(
             Icons.arrow_back_ios_new_rounded,
             color: AppColors.primary,
@@ -125,6 +116,14 @@ class PostDetailScreen extends GetView {
                 child: Image.asset(imgs[index], fit: BoxFit.cover),
               ),
             ).h(80.w),
+            DotsIndicator(
+              dotsCount: imgs.length,
+              // position: 2,
+              decorator: DotsDecorator(
+                color: Colors.black87, // Inactive color
+                activeColor: AppColors.primary,
+              ),
+            ),
             2.h.heightBox,
             Text(
               'Experince :',

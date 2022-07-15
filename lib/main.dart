@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jobbroadcaster/view/homepage_view.dart';
 import 'package:jobbroadcaster/view/landing_view.dart';
+import 'package:jobbroadcaster/view/profile.dart';
 import 'package:sizer/sizer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -30,6 +31,7 @@ class _MyAppState extends State<MyApp> {
           fontFamily: 'Lato',
           primarySwatch: Colors.grey,
         ),
+        // home: ProfileView(),
         home: LandingScreen(),
       ),
     );

@@ -12,27 +12,16 @@ class ProfileScreen extends GetView {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          Icon(
-            Icons.notifications,
-            size: 18,
-            color: AppColors.primary,
-          ).paddingOnly(right: 12).onTap(() {
-            Get.to(() => NotificationScreen());
-          })
-        ],
+        leading: Icon(
+          Icons.arrow_back_ios_new_rounded,
+          color: AppColors.primary,
+          size: 18,
+        ).onTap(() {
+          Get.back();
+        }),
         automaticallyImplyLeading: false,
-        // leading: Icon(
-        //   Icons.arrow_back_ios_new_rounded,
-        //   color: AppColors.primary,
-        //   size: 18,
-        // ).onTap(() {
-        //   Get.back();
-        // }),
-
-        // toolbarHeight: 0,
         centerTitle: true,
-        title: Text('Profile',
+        title: Text('Edit Profile',
             style: TextStyle(
               letterSpacing: 2,
               fontWeight: FontWeight.bold,
@@ -136,7 +125,72 @@ class ProfileScreen extends GetView {
                 decoration: InputDecoration(
                     focusedBorder: InputBorder.none,
                     enabledBorder: InputBorder.none,
-                    hintText: 'Interested Locations',
+                    hintText: 'User Name',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: '5 Intrested Locations',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'State',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 40,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'City',
+                    contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
+              )).centered(),
+          2.h.heightBox,
+          Container(
+              height: 20.h,
+              width: 94.w,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                  border: Border.all(color: Colors.grey)),
+              child: TextField(
+                maxLines: 4,
+                decoration: InputDecoration(
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    hintText: 'About Yourself',
                     contentPadding: EdgeInsets.fromLTRB(16, 0, 0, 10)),
               )).centered(),
           4.h.heightBox,

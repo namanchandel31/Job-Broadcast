@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jobbroadcaster/view/add_post_view.dart';
 import 'package:jobbroadcaster/view/homepage_view.dart';
+import 'package:jobbroadcaster/view/notification_view.dart';
+import 'package:jobbroadcaster/view/profile.dart';
 import 'package:jobbroadcaster/view/profile_view.dart';
 import 'package:jobbroadcaster/view/search_view.dart';
 
@@ -64,6 +67,26 @@ class Dashboard extends GetView {
                         label: 'Search'),
                     BottomNavigationBarItem(
                         icon: Icon(
+                          Icons.add_circle,
+                          color: AppColors.greylight,
+                        ),
+                        activeIcon: Icon(
+                          Icons.add_circle,
+                          color: AppColors.primary,
+                        ),
+                        label: 'Add Post'),
+                    BottomNavigationBarItem(
+                        icon: Icon(
+                          Icons.notifications,
+                          color: AppColors.greylight,
+                        ),
+                        activeIcon: Icon(
+                          Icons.notifications,
+                          color: AppColors.primary,
+                        ),
+                        label: 'Notification'),
+                    BottomNavigationBarItem(
+                        icon: Icon(
                           Icons.person,
                           color: AppColors.greylight,
                         ),
@@ -71,65 +94,8 @@ class Dashboard extends GetView {
                           Icons.person,
                           color: AppColors.primary,
                         ),
-                        label: 'Profile')
+                        label: 'Profile'),
                   ])),
-
-          //   showUnselectedLabels: true,
-          //   showSelectedLabels: true,
-          //   onTap: landingPageController.changeTabIndex,
-          //   currentIndex: landingPageController.tabIndex.value,
-          //   backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-          //   unselectedItemColor: Colors.white.withOpacity(0.5),
-          //   selectedItemColor: Colors.white,
-          //   unselectedLabelStyle: unselectedLabelStyle,
-          //   selectedLabelStyle: selectedLabelStyle,
-          //   items: [
-          //     BottomNavigationBarItem(
-          //       icon: Container(
-          //         margin: EdgeInsets.only(bottom: 7),
-          //         child: Icon(
-          //           Icons.home,
-          //           size: 20.0,
-          //         ),
-          //       ),
-          //       label: 'Home',
-          //       backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-          //     ),
-          //     BottomNavigationBarItem(
-          //       icon: Container(
-          //         margin: EdgeInsets.only(bottom: 7),
-          //         child: Icon(
-          //           Icons.search,
-          //           size: 20.0,
-          //         ),
-          //       ),
-          //       label: 'Explore',
-          //       backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-          //     ),
-          //     BottomNavigationBarItem(
-          //       icon: Container(
-          //         margin: EdgeInsets.only(bottom: 7),
-          //         child: Icon(
-          //           Icons.location_history,
-          //           size: 20.0,
-          //         ),
-          //       ),
-          //       label: 'Places',
-          //       backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-          //     ),
-          //     BottomNavigationBarItem(
-          //       icon: Container(
-          //         margin: EdgeInsets.only(bottom: 7),
-          //         child: Icon(
-          //           Icons.settings,
-          //           size: 20.0,
-          //         ),
-          //       ),
-          //       label: 'Settings',
-          //       backgroundColor: Color.fromRGBO(36, 54, 101, 1.0),
-          //     ),
-          //   ],
-          // ),
         ));
   }
 
@@ -146,9 +112,80 @@ class Dashboard extends GetView {
                 children: [
                   HomePageScreen(),
                   SearchScreen(),
-                  ProfileScreen(),
+                  AddPostView(),
+                  NotificationScreen(),
+                  ProfileView()
+                  // ProfileScreen(),
                 ],
               ))),
     );
   }
 }
+// import 'package:flutter/material.dart';
+// import 'package:flutter/src/foundation/key.dart';
+// import 'package:flutter/src/widgets/framework.dart';
+
+// import '../appcolors.dart';
+
+// class Dashboard extends StatefulWidget {
+//   const Dashboard({Key? key}) : super(key: key);
+
+//   @override
+//   State<Dashboard> createState() => _DashboardState();
+// }
+
+// class _DashboardState extends State<Dashboard> {
+//   int index = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       bottomNavigationBar: BottomNavigationBar(
+//         items: [
+//           BottomNavigationBarItem(
+//             icon: Icon(
+//               Icons.home_filled,
+//               color: AppColors.greylight,
+//             ),
+//             activeIcon: Icon(
+//               Icons.home_filled,
+//               color: AppColors.primary,
+//             ),
+//             label: 'Home',
+//           ),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.search_rounded,
+//                 color: AppColors.greylight,
+//               ),
+//               activeIcon: Icon(
+//                 Icons.search_rounded,
+//                 color: AppColors.primary,
+//               ),
+//               label: 'Search'),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.person,
+//                 color: AppColors.greylight,
+//               ),
+//               activeIcon: Icon(
+//                 Icons.person,
+//                 color: AppColors.primary,
+//               ),
+//               label: 'Profile'),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.search_rounded,
+//                 color: AppColors.greylight,
+//               ),
+//               activeIcon: Icon(
+//                 Icons.search_rounded,
+//                 color: AppColors.primary,
+//               ),
+//               label: 'Notification')
+//         ],
+//         backgroundColor: AppColors.black,
+//         currentIndex: index,
+//       ),
+//     );
+//   }
+// }
