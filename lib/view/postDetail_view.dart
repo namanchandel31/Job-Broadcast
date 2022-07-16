@@ -116,12 +116,17 @@ class PostDetailScreen extends GetView {
                 child: Image.asset(imgs[index], fit: BoxFit.cover),
               ),
             ).h(80.w),
-            DotsIndicator(
-              dotsCount: imgs.length,
-              // position: 2,
-              decorator: DotsDecorator(
-                color: Colors.black87, // Inactive color
-                activeColor: AppColors.primary,
+            Container(
+              height: 2.7.h,
+              child: DotsIndicator(
+                dotsCount: imgs.length,
+
+                // mainAxisSize: MainAxisSize.max,
+                // position: 2,
+                decorator: DotsDecorator(
+                  color: Colors.black87, // Inactive color
+                  activeColor: AppColors.primary,
+                ),
               ),
             ),
             2.h.heightBox,

@@ -121,12 +121,15 @@ class HomePageScreen extends GetView {
                   Icons.send_rounded,
                   color: AppColors.greytext,
                 ).rotate(-45).pOnly(bottom: 4, right: 2),
-                DotsIndicator(
-                  dotsCount: imgs.length,
-                  // position: 2,
-                  decorator: DotsDecorator(
-                    color: Colors.black87, // Inactive color
-                    activeColor: AppColors.primary,
+                Container(
+                  height: 2.7.h,
+                  child: DotsIndicator(
+                    dotsCount: imgs.length,
+                    // position: 2,
+                    decorator: DotsDecorator(
+                      color: Colors.black87, // Inactive color
+                      activeColor: AppColors.primary,
+                    ),
                   ),
                 ),
                 Text(
